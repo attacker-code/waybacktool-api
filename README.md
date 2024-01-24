@@ -26,7 +26,7 @@ from urllib.parse import urlparse
 ### Usage:
 Fetch URLs:
 ```bash
-$ python waybacktool.py pull --host example.com  
+$ python3 waybacktool.py pull --host example.com  
 http://example.com/example.html  
 https://example.com/testing.js  
 https://example.com/test.css  
@@ -34,7 +34,7 @@ https://example.com/test.css
 
 Check URLs:
 ```bash
-$ python waybacktool.py pull --host example.com | python waybacktool.py check 
+$ python3 waybacktool.py pull --host example.com | python waybacktool.py check 
 http://example.com/example.html, 200, 1024, text/html
 https://example.com/testing.js, 301, 58, text/plain; charset=utf-8, https://example.com/testing1234.js
 https://example.com/test.css, 403, 103, text/html
@@ -42,7 +42,7 @@ https://example.com/test.css, 403, 103, text/html
 
 The design allows you to apply `grep` transformations to the output of the fetch URLs. For instance, the following is a valid usage:
 ```bash
-$ python waybacktool.py pull --host example.com | grep html | python waybacktool.py check 
+$ python3 waybacktool.py pull --host example.com | grep html | python waybacktool.py check 
 http://example.com/example.html, 200, 1024, text/html
 ```
 
